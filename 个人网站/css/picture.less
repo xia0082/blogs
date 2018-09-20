@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+}
+@xiang:relative;
+@jue:absolute;
+.pagebg{
+    width: 100%;
+    position: @xiang;
+    z-index: 99;
+    top:50px;
+    height: 240px;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 240px;
+    }
+}
+//主要内容
+.containter{
+    width: 1140px;
+    margin:70px auto;
+    position: @xiang;
+    z-index: 99;
+    overflow: hidden;
+    margin-bottom:-10px;
+    h1{
+        width: 100%;
+        height: 41px;
+        line-height: 40px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        border-bottom: #bfbfbf 1px solid;
+        font-size: 14px;
+        a{
+            width: 100px;
+            height: 40px;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+            color:#fff;
+            background-color: #000;
+            float: left;
+        }
+        a.show{
+            background-color: #3a6ab5;
+        }
+        span{
+            float: right;
+        }
+    }
+    ul{
+        li{
+            width: 255px;
+            height: 278px;
+            float:left;  
+            margin: 0 15px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            position: @xiang;
+            top:0px;
+            transition: all .5s ease;
+            a{
+                color:#555;
+                i{
+                    width: 255px;
+                    height: 200px;
+                    overflow: hidden;
+                    img{
+                        width: 255px;
+                        height: 200px;
+                    }
+                }
+                h2{
+                    height: 38px;
+                    font-size: 14px;
+                    line-height: 1.4;
+                    overflow: hidden;
+                    background: #fff;
+                    padding: 15px 13px;
+                    font-weight: normal;
+                    -webkit-box-shadow: 0 5px 10px 0 rgba(146, 146, 146, .1);
+                    -moz-box-shadow: 0 5px 10px 0 rgba(146, 146, 146, .1);
+                    box-shadow: 0 5px 10px 0 rgba(146, 146, 146, .1);
+                    b{
+                        height: 38px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-box-orient: vertical;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        font-weight: normal;
+                    }
+                    
+                }
+                span{
+                        position: absolute;
+                        right: 30px;
+                        top: 15px;
+                        background: rgba(232, 40, 74, .8);
+                        color: #FFF;
+                        padding: 3px 8px;
+                        font-size: 12px;
+                        border-radius: 3px;
+                }
+            }
+        }
+        li:hover{
+           top:-10px;
+        }
+        li:hover b{
+            color:#00A7EB;
+        }
+        
+    }
+    
+}

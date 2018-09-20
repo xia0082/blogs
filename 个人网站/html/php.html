@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 150px;
+				height: 100px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="imgs">
+			<img src="http://127.0.0.1/xia/个人网站/img/php1.jpg" alt="" />
+			<img src="http://127.0.0.1/xia/个人网站/img/php2.jpg" alt="" />
+			<img src="http://127.0.0.1/xia/个人网站/img/php3.jpg" alt="" />
+			<img src="http://127.0.0.1/xia/个人网站/img/php4.jpg" alt="" />
+			<img src="http://127.0.0.1/xia/个人网站/img/php5.jpg" alt="" />
+			<img src="http://127.0.0.1/xia/个人网站/img/php6.jpg" alt="" />
+			<img src="http://127.0.0.1/xia/个人网站/img/php7.jpg" alt="" />
+		</div>
+		<form method="post">
+			<label>标题:<input type="text" name="title" id="title"/></label>
+			<label>内容:<textarea name="content" rows="5" cols="30" id="content"></textarea></label>
+			<input type="button" value="点击" id="btn"/>
+		</form>
+		
+	</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		class Contents{
+			constructor(){
+				this.bind();
+			}
+			bind(){	
+				var self = this;
+				$(".imgs img").on("click",function(){
+					var index = $(this).index();
+					self.photo = $("img").eq(index).attr("src");
+					console.log(self.photo);
+				})
+				$("#btn").click( () => {
+					var title = $("#title").val();
+					var content = $("#content").val();
+					
+					$.post("../php/test.php",{
+						"title":title,
+						"content":content,
+						"photo":this.photo
+					},function(data){
+						alert(data);
+					})
+				})
+			}
+		}
+		const c = new Contents();
+	})
+</script>

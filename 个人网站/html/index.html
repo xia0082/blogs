@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人网站</title>
+		<link rel="icon" href="../img/me.jpg" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+	</head>
+	<body style="background-color:#F1F1F1">
+		<!--背景效果-->
+		<canvas id="cas" width="" height=""></canvas>
+		<!--头部导航栏-->
+		<header>
+			<nav>
+				<div class="logo">
+					<a href="home.html">星辰阁</a>
+				</div>
+				<ul class="startlist">
+					<li><a href="#" class="index">首页网站</a></li>
+					<li><a href="#">学无止境</a></li>
+					<li><a href="#">慢生活</a></li>
+					<li><a href="picture.html">韶华追忆</a></li>
+					<li><a href="about-me.html">关于我</a></li>
+					<li><a href="#">时间轴</a></li>
+					<li><a href="message.html">留言</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!--轮播图-->
+		<div class="lunbo">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="../img/banner_1.jpg">
+					</div>
+					<div class="swiper-slide">
+						<img src="../img/banner_2.jpg">
+					</div>
+					<div class="swiper-slide">
+						<img src="../img/banner_3.jpg">
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-prev swiper-button-white"></div>
+				<div class="swiper-button-next swiper-button-white"></div>
+			</div>
+		</div>
+		<!--中间内容-->
+		<div class="main">
+			<!--左侧php相关内容-->
+			<div class="phptext" id="phptext">
+				<ul class="every_dian">
+					
+				</ul>
+				<div class="anniu">
+					<button class="prev">上一页</button>
+					<button class="next">下一页</button>
+				</div>
+			</div>
+			<!--模板-->
+			<script type="text/template" id="knowledge">
+		        <li>
+		            <h3><a href="#">@title@</a></h3>
+		            <div class="zhu">
+		            	<div class="pic"><img src="@photo@" alt="" /></div>
+		            	<div class="texts">
+		            		<p>@content@</p>
+		            		<span><i></i>@time@</span>
+		            	</div>
+		            </div>
+		        </li>
+		    </script>
+			<!--侧栏内容-->
+			<aside>
+				<div class="tebie">
+					<h2>特别推荐<i class="line"></i></h2>
+					<ul>
+						<li data-scroll-reveal>
+							<i class="hei">
+								<img src="../img/te1.jpg" alt="" />
+							</i>
+							<p>
+								Just One Last Dance
+								<span>
+									<a href="#">阅读</a>
+								</span>
+							</p>
+						</li>
+						<li data-scroll-reveal>
+							<i class="hei">
+								<img src="../img/te2.jpg" alt="" />
+							</i>
+							<p>
+								Just One Last Dance
+								<span>
+									<a href="#">阅读</a>
+								</span>
+							</p>
+						</li>   
+						<li data-scroll-reveal>
+							<i class="hei">
+								<img src="../img/te3.jpg" alt="" />
+							</i>
+							<p>
+								安静地做一个爱代码的女子
+								<span>
+									<a href="#">阅读</a>
+								</span>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="tebie artic">
+					<h2>推荐文章<i class="line"></i></h2>
+					<div class="wen">
+						<img src="../img/te1.jpg" alt=""/>
+						<p><a href="#">Just One Last Dance</a></p>
+					</div>
+					<ul class="list" id="list">
+						<li class="lis" data-scroll-reveal>
+							<i class="tu"><img src="../img/te2.jpg" alt="" class="small"/></i>
+							<p><a href="#">作为一个程序员,如果遭到质疑你是否能恪守自己的原则?</a></p>
+							<span>[2018-07-15]</span>
+						</li>
+						<li class="lis" data-scroll-reveal>
+							<i class="tu"><img src="../img/te3.jpg" alt="" class="small"/></i>
+							<p><a href="#">6条网页设计配色原则,想法</a></p>
+							<span>[2018-07-15]</span>
+						</li>
+						<li class="lis" data-scroll-reveal>
+							<i class="tu"><img src="../img/te2.jpg" alt="" class="small"/></i>
+							<p><a href="#">作为一个程序员,如果遭到质疑你是否能恪守自己的原则?</a></p>
+							<span>[2018-07-15]</span>
+						</li>
+						<li class="lis" data-scroll-reveal>
+							<i class="tu"><img src="../img/te3.jpg" alt="" class="small"/></i>
+							<p><a href="#">安静地做一个爱设计的女子</a></p>
+							<span>[2018-07-15]</span>
+						</li>
+					</ul>
+				</div>
+				<div class="tebie artic">
+					<h2>点击排行<i class="line"></i></h2>
+					<div class="wen">
+						<img src="../img/te1.jpg" alt=""/>
+						<p><a href="#">Just One Last Dance</a></p>
+					</div>
+					<ul class="list">
+						<li class="lis" data-scroll-reveal>
+							<i class="tu"><img src="../img/te2.jpg" alt="" class="small"/></i>
+							<p><a href="#">作为一个程序员,如果遭到质疑你是否能恪守自己的原则?</a></p>
+							<span>[2018-07-15]</span>
+						</li>
+						<li class="lis" data-scroll-reveal>
+							<i class="tu"><img src="../img/te3.jpg" alt="" class="small"/></i>
+							<p><a href="#">6条网页设计配色原则,想法</a></p>
+							<span>[2018-07-15]</span>
+						</li>
+						<li class="lis" data-scroll-reveal>
+							<i class="tu"><img src="../img/te2.jpg" alt="" class="small"/></i>
+							<p><a href="#">作为一个程序员,如果遭到质疑你是否能恪守自己的原则?</a></p>
+							<span>[2018-07-15]</span>
+						</li>
+						<li class="lis" data-scroll-reveal>
+							<i class="tu"><img src="../img/te3.jpg" alt="" class="small"/></i>
+							<p><a href="#">安静地做一个爱设计的女子</a></p>
+							<span>[2018-07-15]</span>
+						</li>
+					</ul>
+				</div>
+				<div class="tebie artic yun">
+					<h2>标签云<i class="line"></i></h2>
+					<ul>
+						<li><a href="#" class="sheji">设计</a></li>
+						<li><a href="#" class="boke">个人博客</a></li>
+					</ul>
+				</div>
+				<div class="tebie artic yun friend">
+					<h2>友情链接<i class="line"></i></h2>
+				</div>
+				<div class="tebie da">
+					<h2>关注我，么么哒<i class="line"></i></h2>
+					<ul>
+						<li class="sina" data-scroll-reveal>
+							<a href="#"><span>新浪微博</span>霞9189</a>
+						</li>
+						<li class="qq" data-scroll-reveal>
+							<a href="#"><span>QQ号</span>1606792564</a>
+						</li>
+						<li class="email" data-scroll-reveal>
+							<a href="#"><span>邮箱账号</span>1606792564@qq.com</a>
+						</li>
+						<li class="weixin" data-scroll-reveal>
+							<a href="#"><span>微信号</span>wbx13613582606</a>
+						</li>
+					</ul>
+					<img src="../img/ewm.png" alt="" />
+				</div>
+			</aside>
+		</div>
+		<!--结束部分-->
+		<footer>
+			<p>Design by 
+				<a href="#">星辰阁</a>
+				<a href="#" class="lan">蜀ICP备11002373号-1</a>	
+			</p>
+		</footer>
+		<a href="#" class="back">Top</a>
+	</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../lib/swiper.min.js"></script>
+<script type="text/javascript" src="../lib/scrollReveal.js"></script>
+<script type="text/javascript" src="../lib/_StaticResoucesUtil.js"></script>
+<script type="text/javascript" src="../js/canvas.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper ('.swiper-container', { 
+		autoplay:true,
+	    loop: true,
+		observe:true,
+		observeParents:true,
+	    // 如果需要分页器
+	    pagination: {
+	      el: '.swiper-pagination',
+	      clickable :true,
+	    },
+	    
+	    // 如果需要前进后退按钮
+	    navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev',
+	    },
+	})  
+//	window.scrollReveal = new scrollReveal({reset: true});
+//	console.log(window.scrollReveal);
+	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+		(function(){
+			window.scrollReveal = new scrollReveal({reset: true});
+			console.log(window.scrollReveal);
+		})();
+	};
+</script>

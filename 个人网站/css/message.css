@@ -1,0 +1,103 @@
+.containter .personage .introduce .bord {
+  padding: 20px;
+  height: 300px;
+  position: relative;
+  background-color: #fff;
+}
+.containter .personage .introduce .bord p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.containter .personage .introduce .bord p label {
+  display: inline-block;
+}
+.containter .personage .introduce .bord p .leave {
+  position: absolute;
+  top: 28%;
+  display: block;
+  margin-right: 20px;
+}
+.containter .personage .introduce .bord p input {
+  width: 161px;
+  height: 25px;
+  display: inline-block;
+  border: 1px solid darkgray;
+}
+.containter .personage .introduce .bord p textarea {
+  border: 1px solid darkgray;
+  margin-left: 80px;
+}
+.containter .personage .introduce .bord p #sub {
+  display: block;
+  background: #303030;
+  color: #fff;
+  border: 0;
+  line-height: 30px;
+  padding: 0 20px;
+  border-radius: 5px;
+  float: right;
+  margin-right: 60px;
+  cursor: pointer;
+}
+.containter .personage .introduce .bord .imgs {
+  display: inline-block;
+  position: absolute;
+  left: 37%;
+  top: 15%;
+}
+.containter .personage .introduce .bord .imgs img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+}
+.containter .personage .introduce .bord .imgs img:hover {
+  opacity: 1;
+}
+.containter .personage .introduce .say {
+  width: 753px;
+}
+.containter .personage .introduce .say .lang {
+  background: #fff;
+}
+.containter .personage .introduce .say .lang .every {
+  width: 753px;
+  height: 100px;
+  padding: 10px;
+  border-bottom: 1px dashed gray;
+}
+.containter .personage .introduce .say .lang .every .left {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin-top: 25px;
+}
+.containter .personage .introduce .say .lang .every .left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.containter .personage .introduce .say .lang .every .right {
+  width: 590px;
+  height: 60px;
+  float: left;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+.containter .personage .introduce .say .lang .every .right p {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+.containter .personage .introduce .say .lang .every .right p span:nth-child(1) {
+  float: left;
+}
+.containter .personage .introduce .say .lang .every .right p span:nth-child(2) {
+  float: right;
+  color: gray;
+  font-size: 12px;
+}
+footer {
+  margin-top: 35px;
+}

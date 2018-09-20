@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片展示</title>
+		<link rel="icon" href="../img/me.jpg" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/picture.css" />
+	</head>
+	<body style="background-color:#F1F1F1">
+		<canvas id="cas" width="" height=""></canvas>
+		<header>
+			<nav>
+				<div class="logo">
+					<a href="home.html">星辰阁</a>
+				</div>
+				<ul class="startlist">
+					<li><a href="index.html">首页网站</a></li>
+					<li><a href="#">学无止境</a></li>
+					<li><a href="#">慢生活</a></li>
+					<li><a href="#" class="index">韶华追忆</a></li>
+					<li><a href="about-me.html">关于我</a></li>
+					<li><a href="#">时间轴</a></li>
+					<li><a href="message.html">留言</a></li>
+				</ul>
+			</nav>
+		</header>	
+		<div class="pagebg">
+			<img src="../img/tupian.jpg"/>
+		</div>
+		<!--主要内容-->
+		<div class="containter">	
+			<h1>
+				<a href="index.html">网站首页</a>
+				<a href="#" class="show">韶华追忆</a>
+				<span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。</span>
+			</h1>
+			<ul>
+				
+			</ul>
+			<script type="text/template" id="pics">
+		        <li>
+		           <a href="#">
+		           		<i><img src="@image@" alt="" /></i>
+		           		<h2><b>@text@</b></h2>
+		           		<span>@num@</span>
+		           </a>
+		        </li>
+		    </script>
+		</div>
+		<footer>
+			<p>Design by 
+				<a href="#">星辰阁</a>
+				<a href="#" class="lan">蜀ICP备11002373号-1</a>	
+			</p>
+		</footer>
+		<a href="#" class="back">Top</a>
+	</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../js/canvas.js"></script>
+<script type="text/javascript">
+	$(function(){
+		class Pic{
+			constructor(){
+				this.json();
+			}
+			json(){
+				var pics = $("#pics").html();
+				$.post('../php/picture.json',data=>{
+					$('.containter ul').empty();
+	//				console.log(data);
+					data = typeof data == 'object' ? data : eval("(" +data+ ")");
+					var arr = data.data;
+					console.log(arr);
+					for (var i = 0; i < arr.length; i++) {
+						var Domstr = templateFn(pics,arr[i]);
+						$('.containter ul').append(Domstr);
+					}
+					function templateFn(pics,data){
+						return pics.replace(/\@([a-z\w]+)\@/g,function(match,$1,index,string){
+							return data[$1];
+						});
+					}
+				})
+			}
+		}
+		const p = new Pic();
+	})
+</script>

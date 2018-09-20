@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="icon" href="../img/me.jpg" />
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/picture.css" />
+		<link rel="stylesheet" href="../css/aboutme.css" />
+		<link rel="stylesheet" href="../css/message.css" />
+	</head>
+	<body style="background-color:#F1F1F1">
+		<canvas id="cas" width="" height=""></canvas>
+		<header>
+			<nav>
+				<div class="logo">
+					<a href="home.html">星辰阁</a>
+				</div>
+				<ul class="startlist">
+					<li><a href="index.html">首页网站</a></li>
+					<li><a href="#">学无止境</a></li>
+					<li><a href="#">慢生活</a></li>
+					<li><a href="picture.html">韶华追忆</a></li>
+					<li><a href="about-me.html">关于我</a></li>
+					<li><a href="#">时间轴</a></li>
+					<li><a href="#" class="index">留言</a></li>
+				</ul>
+			</nav>
+		</header>	
+		<div class="pagebg">
+			<img src="../img/blank.jpg"/>
+		</div>
+		<div class="containter">	
+			<h1>
+				<a href="index.html">网站首页</a>
+				<a href="#" class="show">留言</a>
+				<span>赞美别人的长处，是一种大度;回复别人的信息，是一种沟通。</span>
+			</h1>
+			<div class="personage">
+				<div class="introduce">
+					<div class="say">
+						<div class="lang">
+							
+						</div>
+					</div>
+					<script type="text/template" id="liuyan">
+						<div class="every">
+							<div class="left"><img src="@url@" alt="" /></div>	
+							<div class="right">
+								<p>
+									<span>@name@</span>
+									<span>@time@</span>
+								</p>
+								<p>@text@</p>
+							</div>
+						</div>
+					</script>
+					<div class="bord">
+						<form action="">
+							<p>
+								<strong>来说点什么吧...</strong>
+							</p>
+							<p>
+								<label>您的姓名：</label>
+								<input type="text" name="name" id="name"/>
+							</p>
+							<p>
+								<label class="leave">留言内容：</label>
+								<textarea name="text" id="text" cols="70" rows="7"></textarea>
+							</p>
+							<p>
+								<button id="sub">提交</button>
+							</p>
+						</form>
+					</div>
+				</div>
+				<div class="message">
+					<div class="about">
+						<p class="avatar">
+							<img src="../img/qq.jpg" alt="" />
+						</p>
+						<p class="abname">冷忆ξ | 程序猿</p>
+						<p class="abposition">web前端工程师小白🤣</p>
+						<p class="text"> 一个95后草根女站长！17年入行。入了这一行 ，就深深的喜欢上它。我喜欢一句话“冥冥中该来则来，无处可逃”。 </p>
+					</div>
+					<div class="qq">
+						<h2>QQ关注</h2>
+						<img src="../img/qq.png" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p>Design by 
+				<a href="#">星辰阁</a>
+				<a href="#" class="lan">蜀ICP备11002373号-1</a>	
+			</p>
+		</footer>
+	</body>
+</html>
+<script type="text/javascript" src="../lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../js/canvas.js"></script>
+<script type="text/javascript" src="../js/mess.js"></script>
